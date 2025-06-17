@@ -142,3 +142,5 @@ WORKDIR /home/$USER_NAME/${APP_DIR}
 
 COPY --chown=${USER_NAME} requirements.txt ./
 RUN . /home/${USER_NAME}/.profile && python -m pip install -r requirements.txt
+
+COPY --chown=${USER_NAME} . ./
